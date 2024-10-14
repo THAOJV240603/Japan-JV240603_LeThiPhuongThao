@@ -19,7 +19,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "name", unique = true, nullable = false)
-    private String name;
+    private String productName;
     @Column(name = "price", nullable = false)
     private double price;
     @ManyToOne

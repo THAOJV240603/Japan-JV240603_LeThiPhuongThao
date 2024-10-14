@@ -13,8 +13,9 @@
 </head>
 <body>
 <h1 class="text-center text-danger">Danh sách sản phẩm</h1>
+
 <div class="container">
-    <a th:href="@{/product/add}" class="btn btn-success">Thêm mới</a>
+    <a th:href="@{product/add}" class="btn btn-success">Thêm mới</a>
     <table class="table">
         <thead>
         <tr>
@@ -28,9 +29,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="product, loop: ${products}">
+        <tr th:each="product, loop : ${products}">
             <td scope="row" th:text="${loop.count}"></td>
-            <td th:text="${product.name}"></td>
+            <td th:text="${product.productName}"></td>
             <td th:text="${product.price}"></td>
             <td th:text="${product.category.name}"></td>
             <td>
@@ -38,8 +39,8 @@
             </td>
             <td th:text="${product.status ? 'Active' : 'Inactive'}"></td>
             <td>
-                <a class="btn btn-primary" th:href="@{'product/edit/' +${product.id}}" >Edit</a>
-                <a class="btn btn-danger" th:href="@{'product/delete/' +${product.id}}" onclick="return confirm('Bạn chắc chắn muốn xóa không?')" >Delete</a>
+                <a class="btn btn-primary" th:href="@{'product/edit/'+${product.id}}" >Edit</a>
+                <a class="btn btn-danger" th:href="@{'product/delete/'+${product.id}}" onclick="return confirm('Bạn chắc chắn muốn xóa không?')" >Delete</a>
             </td>
         </tr>
 

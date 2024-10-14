@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -24,6 +25,8 @@ public class ProductController {
     private ProductService productService;
     @Autowired
     private CategoryService categoryService;
+    @Autowired
+    private ServletContext servletContext;
 
     @GetMapping
     public String index(Model model) {
@@ -45,7 +48,7 @@ public class ProductController {
     public String create(@ModelAttribute Product product, @RequestParam("imgFile") MultipartFile file) {
         //Xử lý upload
         String fileName = file.getOriginalFilename();
-        String path = "F:\\PTHAO\\MD3\\New folder\\sesssion09_thymeleaf\\src\\main\\webappp\\uploads\\";
+        String path = "F:\\PTHAO\\MD3\\Japan-JV240603_LeThiPhuongThao\\src\\main\\webapp\\uploads";
         File dest = new File(path + "/" + fileName);
         try{
             Files.write(dest.toPath(), file.getBytes(), StandardOpenOption.CREATE);
