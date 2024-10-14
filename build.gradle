@@ -45,6 +45,7 @@ dependencies {
   // https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload
   implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.5'
 
+  //Thư viện lombok
   compileOnly 'org.projectlombok:lombok:1.18.34'
   annotationProcessor 'org.projectlombok:lombok:1.18.34'
 

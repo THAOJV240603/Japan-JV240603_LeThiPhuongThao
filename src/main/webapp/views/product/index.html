@@ -1,6 +1,9 @@
 <!doctype html>
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Quản lý sản phẩm</title>
     <!-- Required meta tags -->
@@ -29,8 +32,10 @@
         </tr>
         </thead>
         <tbody>
+
         <tr th:each="product, loop : ${products}">
             <td scope="row" th:text="${loop.count}"></td>
+
             <td th:text="${product.productName}"></td>
             <td th:text="${product.price}"></td>
             <td th:text="${product.category.name}"></td>

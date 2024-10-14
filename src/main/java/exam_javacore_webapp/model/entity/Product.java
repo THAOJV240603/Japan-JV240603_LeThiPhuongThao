@@ -22,12 +22,13 @@ public class Product {
     private String productName;
     @Column(name = "price", nullable = false)
     private double price;
-    @ManyToOne
-    @JoinColumn(name = "category_id", referencedColumnName = "id")
-    private Category category;
     @Column(name = "image")
     private String image;
     @Column(name = "status", nullable = false)
     @ColumnDefault("1")
     private boolean status;
+    @ManyToOne
+    @JoinColumn(name = "category_id", referencedColumnName = "id", nullable = false)
+    private Category category;
+
 }
