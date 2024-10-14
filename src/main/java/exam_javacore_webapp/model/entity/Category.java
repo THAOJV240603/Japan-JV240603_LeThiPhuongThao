@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
 @Entity
@@ -19,6 +20,7 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "name", length = 100, unique = true, nullable = false)
+    @NotBlank(message = "Tên danh mục không được rỗng!")
     private String name;
     @Column(name = "description", nullable = false)
     private String description;

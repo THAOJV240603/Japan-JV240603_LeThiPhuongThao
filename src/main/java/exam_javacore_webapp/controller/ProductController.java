@@ -31,7 +31,7 @@ public class ProductController {
     @GetMapping
     public String index(Model model) {
         List<Product> products = productService.findAll();
-        model.addAttribute("product", products);
+        model.addAttribute("products", products);
         return "product/index";
     }
 
@@ -52,8 +52,8 @@ public class ProductController {
         File dest = new File(path + "/" + fileName);
         try{
             Files.write(dest.toPath(), file.getBytes(), StandardOpenOption.CREATE);
-        }catch (IOException e){
-            throw new RuntimeException(e);
+        }catch (IOException ioException){
+            throw new RuntimeException(ioException);
         }
         product.setImage(fileName);
         if(productService.create(product)){
