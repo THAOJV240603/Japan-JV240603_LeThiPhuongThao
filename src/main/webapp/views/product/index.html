@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Quản lý sản phẩm</title>
     <!-- Required meta tags -->
@@ -11,6 +12,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+<h1 class="text-center text-danger">Danh sách sản phẩm</h1>
 <div class="container">
     <a th:href="@{/product/add}" class="btn btn-success">Thêm mới</a>
     <table class="table">

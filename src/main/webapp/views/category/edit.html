@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Cập nhật</title>
     <!-- Required meta tags -->
@@ -15,15 +16,15 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <form action="" method="post" th:object="${category}">
+            <form action="" method="post" th:object="${category}" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Category Name</label>
-                    <input type="name" class="form-control" th:field="*{name}" >
+                    <input type="text" class="form-control" th:field="*{name}" />
 
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <input type="text" class="form-control" th:field="*{description}">
+                    <input type="text" class="form-control" th:field="*{description}" />
                 </div>
 
                 <button type="submit" class="btn btn-primary">Cập nhật</button>
