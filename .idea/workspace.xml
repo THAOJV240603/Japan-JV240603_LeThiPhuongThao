@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2020e68-4b78-41ad-8679-abc26ae675a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/exam_javacore_webapp/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exam_javacore_webapp/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exam_javacore_webapp/model/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exam_javacore_webapp/model/entity/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/product/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +73,7 @@
     &quot;Tomcat Server.Tomcat 9.0.95.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/PTHAO/MD3/Japan-JV240603_LeThiPhuongThao/src/main/webapp/views/product&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/PTHAO/MD3/Java-jv240603_Nguyen_TrungKien&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -196,7 +199,8 @@
       <option name="presentableId" value="Default" />
       <updated>1728905901545</updated>
       <workItem from="1728905902654" duration="19567000" />
-      <workItem from="1728952144462" duration="1956000" />
+      <workItem from="1728952144462" duration="5151000" />
+      <workItem from="1729006544488" duration="1923000" />
     </task>
     <servers />
   </component>

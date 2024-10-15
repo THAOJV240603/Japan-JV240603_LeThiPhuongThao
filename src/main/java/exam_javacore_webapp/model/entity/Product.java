@@ -31,4 +31,5 @@ public class Product {
     @JoinColumn(name = "category_id", referencedColumnName = "id", nullable = false)
     private Category category;
 
+
 }

@@ -62,6 +62,8 @@ public class ProductController {
     public String edit(@PathVariable("id") int id, Model model) {
         Product product = productService.findById(id);
         model.addAttribute("product", product);
+        List<Category> categories = categoryService.findAll();
+        model.addAttribute("categories",categories);
         return "product/edit";
     }
 

@@ -1,6 +1,5 @@
 package exam_javacore_webapp.model.dao.product;
 
-import exam_javacore_webapp.model.entity.Category;
 import exam_javacore_webapp.model.entity.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
