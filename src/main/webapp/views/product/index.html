@@ -36,7 +36,7 @@
             <td th:text="${product.price}"></td>
             <td th:text="${product.category.name}"></td>
             <td>
-                <img th:src="@{|/uploads/${product.image}|}" width="180px" />
+                <img th:src="@{|/uploads/${product.image}|}" width="100px" />
             </td>
             <td th:text="${product.status ? 'Active' : 'Inactive'}"></td>
             <td>

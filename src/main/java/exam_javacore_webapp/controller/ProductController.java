@@ -44,7 +44,7 @@ public class ProductController {
     public String create(@ModelAttribute Product product, @RequestParam("imgFile") MultipartFile file) {
         //Xử lý upload
         String fileName = file.getOriginalFilename();
-        String path = "F:\\PTHAO\\MD3\\Japan-JV240603_LeThiPhuongThao\\src\\main\\webapp\\uploads";
+        String path = "/uploads/";
         File dest = new File(path + "/" + fileName);
         try{
             Files.write(dest.toPath(), file.getBytes(), StandardOpenOption.CREATE);

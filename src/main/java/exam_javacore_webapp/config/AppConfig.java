@@ -78,14 +78,14 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     @Bean
     CommonsMultipartResolver multipartResolver(){
         CommonsMultipartResolver resolver = new CommonsMultipartResolver();
-        resolver.setMaxUploadSizePerFile(52428800);
+        resolver.setMaxUploadSizePerFile(52428800); //=50MB
         return resolver;
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/uploads/**")
-                .addResourceLocations("file:F:\\PTHAO\\MD3\\Japan-JV240603_LeThiPhuongThao\\src\\main\\webapp\\uploads");
+                .addResourceLocations("/uploads/");
     }
 
     @Override
