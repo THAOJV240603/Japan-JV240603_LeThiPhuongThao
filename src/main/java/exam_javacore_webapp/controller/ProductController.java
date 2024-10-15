@@ -10,12 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -25,8 +23,6 @@ public class ProductController {
     private ProductService productService;
     @Autowired
     private CategoryService categoryService;
-    @Autowired
-    private ServletContext servletContext;
 
     @GetMapping
     public String index(Model model) {
@@ -40,7 +36,7 @@ public class ProductController {
         Product product = new Product();
         model.addAttribute("product", product);
         List<Category> categories = categoryService.findAll();
-        model.addAttribute("categories", categories);
+        model.addAttribute("categories",categories);
         return "product/add";
     }
 

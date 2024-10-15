@@ -30,18 +30,18 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="products, loop : ${products}">
+        <tr th:each="product, loop : ${products}">
             <td scope="row" th:text="${loop.count}"></td>
-            <td th:text="${products.productName}"></td>
-            <td th:text="${products.price}"></td>
-            <td th:text="${products.category.name}"></td>
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.category.name}"></td>
             <td>
-                <img th:src="@{|/uploads/${products.image}|}" width="180px" />
+                <img th:src="@{|/uploads/${product.image}|}" width="180px" />
             </td>
-            <td th:text="${products.status ? 'Active' : 'Inactive'}"></td>
+            <td th:text="${product.status ? 'Active' : 'Inactive'}"></td>
             <td>
-                <a class="btn btn-primary" th:href="@{'product/edit/'+${products.id}}">Edit</a>
-                <a class="btn btn-danger" th:href="@{'product/delete/'+${products.id}}" onclick="return confirm('Bạn chắc chắn muốn xóa không?')">Delete</a>
+                <a class="btn btn-primary" th:href="@{'product/edit/'+${product.id}}">Edit</a>
+                <a class="btn btn-danger" th:href="@{'product/delete/'+${product.id}}" onclick="return confirm('Bạn chắc chắn muốn xóa không?')">Delete</a>
             </td>
         </tr>
 
